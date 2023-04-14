@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct FluffyCardsApp: App {
+    
+    @StateObject var viewState = ViewState()
+    @StateObject var store = CardStore(defaultData: true)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardsView()
+                .environmentObject(viewState)
+                .environmentObject(store)
         }
     }
 }
