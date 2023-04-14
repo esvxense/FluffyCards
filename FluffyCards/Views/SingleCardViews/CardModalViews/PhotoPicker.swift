@@ -57,7 +57,6 @@ class PhotosCoordinator: NSObject, PHPickerViewControllerDelegate {
                 }
             }
         }
-        
         parent.presentationMode.wrappedValue.dismiss()
     }
     
